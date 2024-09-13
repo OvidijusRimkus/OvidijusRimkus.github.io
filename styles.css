@@ -268,14 +268,10 @@ footer{
     width: 100%;
     height: auto;
     height: 20rem;
-    
     gap: 10px;
     border-radius: 10px;
     padding: 10px;
-   
-    
     margin: 3rem;
-
 }
 
 .apiemuskorteles {
@@ -299,7 +295,6 @@ footer{
     box-shadow: 10px 10px 20px #8a8686a8;
     width: 300px;
 }
-
 
 h3{
     font-size: 2rem;
@@ -365,10 +360,9 @@ display: flex;
     margin: auto;
 }
 
-
-
 .form-group {
     margin-bottom: 1rem;
+
 }
 .form-group label {
     display: block;
