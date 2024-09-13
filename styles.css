@@ -259,6 +259,10 @@ footer{
     border: none;
 }
 
+#scrollToTopBtn{
+    cursor: pointer;
+}
+
 .apiemusdivas {
     display: flex;
     width: 100%;
@@ -277,16 +281,15 @@ footer{
 .apiemuskorteles {
     display: flex;
     flex-direction: column;
-   width: 70rem;
+   max-width:  100%;
     margin: 3rem;
-    gap: 10px;
+    gap: 4rem;
    
 }
 
 .apieallduck{
     padding-top: 1rem;
-    max-width: 100%;
-    max-height: 100%;
+    width: 300px;
     object-fit: contain;
 }
 
@@ -294,7 +297,9 @@ footer{
    display: flex;
    background-color: rgba(192, 194, 194, 0.589);
     box-shadow: 10px 10px 20px #8a8686a8;
+    width: 300px;
 }
+
 
 h3{
     font-size: 2rem;
@@ -330,6 +335,7 @@ h3{
 #pasleptas, #pasleptas1, #pasleptas2, #pasleptas3{
     margin: 3rem;
     display: none;
+    max-width: 80%;
 }
 .kontaktudalis{
 display: flex;
@@ -342,6 +348,64 @@ display: flex;
      width: 100px;
      height: 100px;
  }
+
+ #pasleptastxt{
+  flex: 1;
+  text-indent: 2rem;
+  font-size: 20px;
+ }
+
+ .contact-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+#submitBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+#submitBtn:hover {
+    background-color: #218838;
+}
+#result {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+}
 
 @keyframes baneris {
     0% {
@@ -455,7 +519,17 @@ display: flex;
         width: fit-content;
         height: auto;
         align-items: center;
+        justify-content: center;
+    }
 
+    .apieallduck{
+        width: 100%;
+        height: auto;
+    }
+
+    .charakter{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -568,20 +642,39 @@ display: flex;
     .apiemusdivas{
         display: flex;
         flex-direction: column;
-        max-width: 50%;
+        max-width: 100%;
         height: auto;
         
     }
 
     .apiemuskorteles{
-        width: fit-content;
+        width: auto;
         height: auto;
         align-items: center;
+        overflow-x: hidden;
+        
 
+    }
+
+    .charakter{
+        width: 100%;
+        justify-content: center;
     }
 
     #footer{
         justify-content: center;
         align-items: center;
+    }
+
+    .apieinfo{
+        margin: 0;
+    }
+
+    
+
+    #pasleptas, #pasleptas1, #pasleptas2, #pasleptas3{
+        max-width: 100%;
+        height: auto;
+        
     }
 }

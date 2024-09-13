@@ -14,20 +14,38 @@
         <nav>
             <ul>
                 <li><a class="lis" href="index.html"> Pagrindinis </a></li>
-                <li><a class="lis" href="#istorija"> Istorija </a></li>
+                <li><a class="lis" href="index.html #istorija"> Istorija </a></li>
                 <li><a class="lis" href="apiemus.html"> Apie mus </a></li>
                 <li><a class="lis" href="kontaktai.html"> Kontaktai </a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <Section class="kontaktudalis">
-            <div class="kontaktaibox"></div>
-            <div class="kontaktaibox"></div>
-            <div class="kontaktaibox"></div>
-            <div class="kontaktaibox"></div>
-        </Section>
-    </main>
+    <div class="contact-form">
+        <div id="contact">
+        <h2>Kontaktų Forma</h2>
+        <div class="form-group">
+            <label for="name">Vardas:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">El. paštas:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Pavadinimas:</label>
+            <input type="text" id="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Žinutė:</label>
+            <textarea id="message" required></textarea>
+        </div>
+        <button id="submitBtn">Siųsti</button>
+
+        <div id="result"></div>
+       </div>
+    </div>
+
+    <script src="script.js"></script>
     <footer id="footer">
         <div id="a1dalis">
         <img id="kietaantis" src="Pic/istockphoto-1446929530-612x612-removebg-preview.png" alt="Kieta antis">

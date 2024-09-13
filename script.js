@@ -46,11 +46,38 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Patikriname esamą display reikšmę
         if (pasleptas.style.display === 'none' || pasleptas.style.display === '') {
-            pasleptas.style.display = 'block'; // Jei paslėptas, rodom
+            pasleptas.style.display = 'flex'; // Jei paslėptas, rodom
             mygtukas.value = 'Mažiau';   // Pakeičiam mygtuko tekstą į "Mažiau"
         } else {
             pasleptas.style.display = 'none';  // Jei rodomas, slepiam
             mygtukas.value = 'Daugiau';  // Pakeičiam mygtuko tekstą į "Daugiau"
         }
     }
+});
+
+document.getElementById('submitBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Sustabdo formos siuntimą
+
+    // Gauti įvesties vertes
+    const vardas = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const pavadinimas = document.getElementById('subject').value;
+    const zinute = document.getElementById('message').value;
+
+    // Tikrinti, ar visi laukai užpildyti
+    if (vardas === '' || email === '' || pavadinimas === '' || zinute === '') {
+        alert("Visi laukai privalomi!");
+        return;
+    }
+
+    // Rodome rezultatus
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+        <h3>Siųsta informacija:</h3>
+        <p><strong>Vardas:</strong> ${vardas}</p>
+        <p><strong>El. paštas:</strong> ${email}</p>
+        <p><strong>Pavadinimas:</strong> ${pavadinimas}</p>
+        <p><strong>Žinutė:</strong> ${zinute}</p>
+    `;
+    resultDiv.style.display = 'block'; // Parodo rezultatų bloką
 });
