@@ -37,20 +37,15 @@ ul {
     border-radius: 5px;
 }
 
-/* Banerio dizainas */
 .baneris {
     display: flex;
     position: relative;
-    /* Tai padės mums sukurti kontekstą viduje esantiems elementams */
     height: 350px;
     width: 100%;
-    /* Užima visą ekraną */
     overflow: hidden;
-    /* Paslėps visus perteklinius elementus */
     animation: baneris 5s infinite;
 }
 
-/* Antys turi užimti visą banerį */
 .antys {
     position: absolute;
     top: 0;
@@ -58,7 +53,6 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Užtikrina, kad vaizdas užims visą plotą nekeičiant proporcijų */
 }
 
 .antraste {
@@ -198,7 +192,6 @@ p {
 
 .mygtukas {
     margin-top: 1rem;
-    /* Atstumas nuo vaizdo */
     padding: 10px 20px;
     background-color: #ff5722;
     border: none;
@@ -313,7 +306,6 @@ h3{
 
 #apie, #apie1,#apie2, #apie3{
     margin-top: 1rem;
-    /* Atstumas nuo vaizdo */
     padding: 10px 20px;
     background-color: #ff5722;
     border: none;
@@ -358,6 +350,7 @@ display: flex;
     width: 100%;
     max-width: 400px;
     margin: auto;
+    
 }
 
 .form-group {
@@ -401,6 +394,15 @@ display: flex;
     display: none;
 }
 
+.kontaktufooteris{
+    position: absolute;
+    bottom: auto;
+}
+
+.kontaktumain{
+    height: 80vh;
+}
+
 @keyframes baneris {
     0% {
         background-image: url(Pic/Tubbz-Numskull-Header-Background.webp)
@@ -431,7 +433,6 @@ display: flex;
 
 }
 
-/* Dideliems ekranams (virš 1200px pločio) */
 @media (min-width: 1200px) {
     header {
         padding: 30px 80px;
@@ -447,7 +448,6 @@ display: flex;
     }
 }
 
-/* Laptopams (nuo 992px iki 1199px pločio) */
 @media (min-width: 992px) and (max-width: 1199px) {
     header {
         padding: 20px 50px;
@@ -471,7 +471,6 @@ display: flex;
     }
 }
 
-/* Planšetėms (nuo 768px iki 991px pločio) */
 @media (min-width: 768px) and (max-width: 991px) {
     header {
         padding: 15px 40px;
@@ -490,7 +489,6 @@ display: flex;
         margin-bottom: 10px;
         animation: none;
         margin-bottom: 0;
-        /* Animaciją galima išjungti planšetėms */
     }
 
     .korteles{
@@ -527,16 +525,6 @@ display: flex;
     }
 }
 
-
-
-
-
-
-
-
-
-
-/* Mobiliesiems (iki 767px pločio) */
 @media (max-width: 767px) {
     header {
         height: auto;
@@ -551,8 +539,6 @@ display: flex;
         animation: none;
         position: absolute;
         left: 3rem;
-    
-        /* Animaciją galima išjungti mobiliesiems */
     }
 
     ul {
@@ -670,5 +656,8 @@ display: flex;
         max-width: 100%;
         height: auto;
         
+    }
+    h1 {
+        flex-wrap: nowrap;
     }
 }
